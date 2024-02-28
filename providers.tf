@@ -5,6 +5,11 @@ terraform {
       version = "5.38.0"
     }
   }
+    backend "s3" {
+      bucket = "mgsantos-terraform-states"
+      key = "EKS-Cluster/terraform.tfstate"
+      region = "us-east-1"
+    }
 }
 
 provider "aws" {
