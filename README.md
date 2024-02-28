@@ -19,6 +19,9 @@ Repositorio de Criação de Cluster EKS com Terraform
 
     Terraform - Providers
         https://registry.terraform.io/browse/providers
+    
+    Pre-Commit
+        https://pre-commit.com/
 
 # Provisionamento via terraform de 
     Network
