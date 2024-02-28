@@ -20,6 +20,9 @@ Repositorio de Criação de Cluster EKS com Terraform
     Terraform - Providers
         https://registry.terraform.io/browse/providers
     
+    Terraform - Functions
+        https://developer.hashicorp.com/terraform/language/functions
+    
     Pre-Commit
         https://pre-commit.com/
 
