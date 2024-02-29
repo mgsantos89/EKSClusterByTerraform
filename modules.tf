@@ -4,3 +4,9 @@ module "eks_network" {
   prefixo_projeto = var.prefixo_projeto
   tags            = local.tags
 }
+
+module "eks_cluster" {
+  source          = "./modules/eks"
+  prefixo_projeto = var.prefixo_projeto
+  tags            = local.tags
+}
