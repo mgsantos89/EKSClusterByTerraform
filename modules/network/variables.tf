@@ -9,6 +9,6 @@ variable "prefixo_projeto" {
 }
 
 variable "tags" {
-  type = map 
+  type        = map(any)
   description = "Tags Padrão dos Recursos provisionados"
 }
