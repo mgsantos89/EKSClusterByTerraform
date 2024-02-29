@@ -13,6 +13,9 @@ Repositorio de Criação de Cluster EKS com Terraform
 
     Criação do IAM OIDC provider
         https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
+    
+    OIDC Fingerprint
+        https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html
 
     Instalação do LoadBalancer Controller
         https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
