@@ -28,7 +28,7 @@ Repositorio de Criação de Cluster EKS com Terraform
     Terraform - Functions
         https://developer.hashicorp.com/terraform/language/functions
     
-    Terraform -  Trabalhando com Modulos
+    Terraform -  Trabalhando com Modulo
         https://developer.hashicorp.com/terraform/language/modules/develop
     
     Pre-Commit
