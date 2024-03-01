@@ -33,21 +33,3 @@ Repositorio de Criação de Cluster EKS com Terraform
     
     Pre-Commit
         https://pre-commit.com/
-
-# Provisionamento via terraform de 
-    Network
-
-        VPC
-        Subnet
-        ElasticIp
-        Internet Gateway
-        routetables
-        Nat Gateway
-        Security Groups
-
-    
-    IAM
-        EKS Role
-        Node Role
-
-    
