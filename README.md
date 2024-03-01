@@ -29,6 +29,7 @@ No resources.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | CIDR de Rede para ser usado na VPC | `string` | n/a | yes |
+| <a name="input_demo"></a> [demo](#input\_demo) | n/a | `string` | `"demo"` | no |
 | <a name="input_prefixo_projeto"></a> [prefixo\_projeto](#input\_prefixo\_projeto) | Prefixo para nome de recursos | `string` | n/a | yes |
 
 ## Outputs
