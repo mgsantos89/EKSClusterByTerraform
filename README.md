@@ -19,7 +19,9 @@ Repositorio de Criação de Cluster EKS com Terraform
 
     Instalação do LoadBalancer Controller
         https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
-
+    
+    IAM Role for Service Acounts
+        https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html
     Terraform - Providers
         https://registry.terraform.io/browse/providers
     
