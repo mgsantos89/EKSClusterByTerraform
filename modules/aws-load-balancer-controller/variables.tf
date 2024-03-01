@@ -7,3 +7,8 @@ variable "tags" {
   type        = map(any)
   description = "Tags Padrão dos Recursos provisionados"
 }
+
+variable "oidc" {
+  type        = string
+  description = "url HTTPS para OIDC provider do cluster"
+}
