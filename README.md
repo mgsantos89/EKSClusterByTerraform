@@ -30,6 +30,8 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | CIDR de Rede para ser usado na VPC | `string` | n/a | yes |
 | <a name="input_prefixo_projeto"></a> [prefixo\_projeto](#input\_prefixo\_projeto) | Prefixo para nome de recursos | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | Região AWS para criação dos Recursos | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | TAGS padrões a serem incluidas para identificações dos recursos | `map(any)` | n/a | yes |
 
 ## Outputs
 

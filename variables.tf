@@ -9,3 +9,13 @@ variable "prefixo_projeto" {
 
 
 }
+
+variable "region" {
+  type        = string
+  description = "Região AWS para criação dos Recursos"
+}
+
+variable "tags" {
+  type        = map(any)
+  description = "TAGS padrões a serem incluidas para identificações dos recursos"
+}
