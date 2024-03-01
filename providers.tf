@@ -15,6 +15,18 @@ terraform {
       version = "2.12.1"
     }
   }
+  #Exemplo
+  #backend "s3" {
+  #  bucket = "devops-storage"
+  #  key    = "EKS-tools/terraform.tfstate"
+  #  region = "us-east-1"
+  #}
+
+  backend "s3" {
+    bucket = ""
+    key    = ""
+    region = ""
+  }
 
 
 }
