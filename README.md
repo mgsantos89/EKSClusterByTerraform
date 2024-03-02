@@ -1,3 +1,132 @@
+# EKS By Terraform
+
+Projeto de criação de cluster EKS utilizando Terraform
+
+## Pré-Requisitos
+
+* Terraform
+
+* AWS CLI configurado com suas credenciais
+
+* Bucket S3
+
+## Preparação
+
+### Backend
+
+Colocar os parametros de backend dentro do arquivo **providers.tf** para armazenamento do state remoto do Terraform no bucket AWS.
+
+```hcl
+backend "s3" {
+  bucket = "NOME_DO_SEU_BUCKET"
+  key    = "PASTA/terraform.tfstate"
+  region = "SUA_REGIAO_AWS"
+  }
+```
+### Variaveis
+A titulo de organização e manutenção do codigo alguns parâmetros estão em variavéis que devem ser passadas no arquivo ***terraform.tfvars***.
+
+```hcl
+#CIDR Block que será usado na criação da VPC EX:10.0.0.0/16
+cidr_block      = "10.0.0.0/16"
+
+#Nome do Projeto, que servirá de prefixo na definição de nome de todos os recursos provisionados
+prefixo_projeto = "EKS-Homolog"
+
+#Região de Provisionamento da Estrutura Ex:us-east-1
+region          = "us-east-1"
+
+#Tags a serem inseridas nos recursos para organização
+tags = {
+    Department = "DevOps"
+    Project    = "Pessoal"
+    Enviroment = "Development"
+    "Gerenciado Por" =  "Terraform"
+  }
+```
+
+
+## Provisionando Cluster
+
+### Inicializando Backend
+
+Após preparação das variáveis e configuração do Backend já inicializar nosso projeto terraform, para downloads das dependências do projeto e inicialização do backend execute
+
+```
+terraform init
+```
+
+### Plan
+
+Uma vez inicializado o backend, podemos rodar o plan para o terraform planejar e preparar o provisionamento da estrutura
+
+```
+terraform plan
+```
+
+### Apply
+
+Se o plan ocorrer sem erros é provavel que todas as variáveis tenham sido informadas corretamente e o codigo está pronto para ser executado e provisionar a estrutura conforme o que saida do comando plan no terminal. Para provisionar sua estrutura você pode rodar os seguintes comandos:
+
+* Com confirmação
+```
+terraform apply
+```
+
+* Sem confirmação
+```
+terraform apply --auto-approve
+```
+
+### Concluido
+
+Com apenas poucos comandos você provisionou todo um cluster EKS usando o Terraform, utilizando as melhores praticas recomendadas pela AWS e atendendo pré-requisitos para correto funcionamento do cluster,Resumo da Estrutura criada
+
+* Network
+  * VPC
+  * Subnets publicas e privadas
+  * Internet Gateway
+  * Nat Gateway
+  * Elastic IP
+  * Route Tables
+
+* EKS Cluster
+  * Policies
+  * IAM Roles
+  * Security Groups
+  * OIDC Provider
+
+* Node Groups
+  * Policies
+  * IAM Roles
+  * Node Groups
+
+* Add-On Eks Cluster
+  * Sevice Account
+  * Policies
+  * Roles
+  * Aws Load balancer Controller
+
+## Destruindo a Estrutura
+
+No caso de necessidade de eliminiar a estrutura basta
+
+* Planejar a destruição
+```
+terraform plan -destroy
+```
+
+* Executar com confirmação
+```
+terraform apply -destroy
+```
+Ou
+* Executar sem confirmação
+```
+terraform apply -destroy --auto-approve
+```
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
