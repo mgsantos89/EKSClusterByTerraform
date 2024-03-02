@@ -6,3 +6,4 @@
 cidr_block      = ""
 prefixo_projeto = ""
 region          = ""
+tags            = {}
